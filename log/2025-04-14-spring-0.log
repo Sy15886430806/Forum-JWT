@@ -1,0 +1,1061 @@
+2025-04-14 12:35:34.663  INFO 5304 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 5304 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 12:35:34.664  INFO 5304 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 12:35:35.154  INFO 5304 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 12:35:35.155  INFO 5304 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 12:35:35.173  INFO 5304 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-14 12:35:35.552  INFO 5304 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 12:35:35.560  INFO 5304 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 12:35:35.560  INFO 5304 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 12:35:35.595  INFO 5304 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 12:35:35.596  INFO 5304 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 908 ms
+2025-04-14 12:35:36.297  INFO 5304 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 12:35:36.688  INFO 5304 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 12:35:36.691  INFO 5304 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 12:35:36.773  INFO 5304 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#900649e:0/SimpleConnection@7fa8fff [delegate=amqp://admin@127.0.0.1:5672/, localPort=14629]
+2025-04-14 12:35:36.799  INFO 5304 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.471 seconds (process running for 2.877)
+2025-04-14 12:35:42.635  INFO 5304 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 12:35:42.636  INFO 5304 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 12:35:42.636  INFO 5304 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-14 12:35:42.904  INFO 5304 --- [http-nio-8080-exec-1] (224468382043475968) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:35:42.996  INFO 5304 --- [http-nio-8080-exec-1] (224468382043475968) com.example.filter.RequestLogFilter      : 请求处理耗时: 94ms | 响应结果: {"code":401,"data":null,"id":224468382043475968,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:35:43.026  INFO 5304 --- [http-nio-8080-exec-2] (224468382563569664) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:35:43.102  INFO 5304 --- [http-nio-8080-exec-2] (224468382563569664) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 12:35:43.297  INFO 5304 --- [http-nio-8080-exec-2] (224468382563569664) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@282fc8a5
+2025-04-14 12:35:43.299  INFO 5304 --- [http-nio-8080-exec-2] (224468382563569664) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 12:35:43.370  INFO 5304 --- [http-nio-8080-exec-2] (224468382563569664) com.example.filter.RequestLogFilter      : 请求处理耗时: 344ms | 响应结果: {"id":224468382563569664,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:35:53.369  INFO 5304 --- [http-nio-8080-exec-3] (224468425945255936) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:35:53.370  INFO 5304 --- [http-nio-8080-exec-3] (224468425945255936) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224468425945255936,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:35:53.374  INFO 5304 --- [http-nio-8080-exec-4] (224468425966227456) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:35:53.379  INFO 5304 --- [http-nio-8080-exec-4] (224468425966227456) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224468425966227456,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:39:19.727  INFO 5304 --- [http-nio-8080-exec-6] (224469291473440768) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:39:19.727  INFO 5304 --- [http-nio-8080-exec-6] (224469291473440768) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224469291473440768,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:39:19.730  INFO 5304 --- [http-nio-8080-exec-7] (224469291486023680) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:39:19.733  INFO 5304 --- [http-nio-8080-exec-7] (224469291486023680) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224469291486023680,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:39:44.382  INFO 5304 --- [http-nio-8080-exec-8] (224469394884005888) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:39:44.382  INFO 5304 --- [http-nio-8080-exec-8] (224469394884005888) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224469394884005888,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:39:44.385  INFO 5304 --- [http-nio-8080-exec-9] (224469394896588800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:39:44.387  INFO 5304 --- [http-nio-8080-exec-9] (224469394896588800) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224469394896588800,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:39:53.365  INFO 5304 --- [http-nio-8080-exec-10] (224469432561438720) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:39:53.366  INFO 5304 --- [http-nio-8080-exec-10] (224469432561438720) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224469432561438720,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:39:53.370  INFO 5304 --- [http-nio-8080-exec-1] (224469432582410240) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:39:53.373  INFO 5304 --- [http-nio-8080-exec-1] (224469432582410240) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224469432582410240,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:45:38.654  INFO 5304 --- [http-nio-8080-exec-3] (224470880808472576) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:45:38.654  INFO 5304 --- [http-nio-8080-exec-3] (224470880808472576) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224470880808472576,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:45:38.657  INFO 5304 --- [http-nio-8080-exec-4] (224470880821055488) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:45:38.660  INFO 5304 --- [http-nio-8080-exec-4] (224470880821055488) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224470880821055488,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:48:08.006  INFO 5304 --- [http-nio-8080-exec-6] (224471507236163584) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:48:08.007  INFO 5304 --- [http-nio-8080-exec-6] (224471507236163584) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224471507236163584,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:48:08.010  INFO 5304 --- [http-nio-8080-exec-7] (224471507252940800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:48:08.013  INFO 5304 --- [http-nio-8080-exec-7] (224471507252940800) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224471507252940800,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 12:57:33.748  INFO 5304 --- [http-nio-8080-exec-9] (224473880130097152) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 12:57:33.749  INFO 5304 --- [http-nio-8080-exec-9] (224473880130097152) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224473880130097152,"message":"Full authentication is required to access this resource"}
+2025-04-14 12:57:33.757  INFO 5304 --- [http-nio-8080-exec-10] (224473880167845888) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 12:57:33.762  INFO 5304 --- [http-nio-8080-exec-10] (224473880167845888) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224473880167845888,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:15:16.383  INFO 5304 --- [http-nio-8080-exec-2] (224478337144328192) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:15:16.384  INFO 5304 --- [http-nio-8080-exec-2] (224478337144328192) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224478337144328192,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:15:16.388  INFO 5304 --- [http-nio-8080-exec-3] (224478337161105408) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:15:16.393  INFO 5304 --- [http-nio-8080-exec-3] (224478337161105408) com.example.filter.RequestLogFilter      : 请求处理耗时: 6ms | 响应结果: {"id":224478337161105408,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:15:53.068  INFO 5304 --- [http-nio-8080-exec-4] (224478491012370432) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:15:53.069  INFO 5304 --- [http-nio-8080-exec-4] (224478491012370432) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224478491012370432,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:15:53.072  INFO 5304 --- [http-nio-8080-exec-5] (224478491024953344) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:15:53.074  INFO 5304 --- [http-nio-8080-exec-5] (224478491024953344) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224478491024953344,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:16:18.587  INFO 5304 --- [http-nio-8080-exec-6] (224478598046814208) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:16:18.587  INFO 5304 --- [http-nio-8080-exec-6] (224478598046814208) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224478598046814208,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:16:18.590  INFO 5304 --- [http-nio-8080-exec-7] (224478598059397120) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:16:18.592  INFO 5304 --- [http-nio-8080-exec-7] (224478598059397120) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224478598059397120,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:16:41.882  INFO 5304 --- [http-nio-8080-exec-8] (224478695753125888) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:16:41.883  INFO 5304 --- [http-nio-8080-exec-8] (224478695753125888) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224478695753125888,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:16:41.885  INFO 5304 --- [http-nio-8080-exec-9] (224478695765708800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:16:41.888  INFO 5304 --- [http-nio-8080-exec-9] (224478695765708800) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224478695765708800,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:17:43.434  INFO 5304 --- [http-nio-8080-exec-1] (224478953920925696) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:17:43.434  INFO 5304 --- [http-nio-8080-exec-1] (224478953920925696) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224478953920925696,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:17:43.438  INFO 5304 --- [http-nio-8080-exec-2] (224478953937702912) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:17:43.441  INFO 5304 --- [http-nio-8080-exec-2] (224478953937702912) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224478953937702912,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:17:59.564  INFO 5304 --- [http-nio-8080-exec-3] (224479021575049216) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:17:59.564  INFO 5304 --- [http-nio-8080-exec-3] (224479021575049216) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224479021575049216,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:17:59.567  INFO 5304 --- [http-nio-8080-exec-4] (224479021587632128) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:17:59.570  INFO 5304 --- [http-nio-8080-exec-4] (224479021587632128) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224479021587632128,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:20:01.876  INFO 5304 --- [http-nio-8080-exec-6] (224479534588760064) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:20:01.877  INFO 5304 --- [http-nio-8080-exec-6] (224479534588760064) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224479534588760064,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:20:01.879  INFO 5304 --- [http-nio-8080-exec-7] (224479534601342976) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:20:01.883  INFO 5304 --- [http-nio-8080-exec-7] (224479534601342976) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224479534601342976,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:20:27.955  INFO 5304 --- [http-nio-8080-exec-8] (224479643972014080) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:20:27.955  INFO 5304 --- [http-nio-8080-exec-8] (224479643972014080) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224479643972014080,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:20:27.959  INFO 5304 --- [http-nio-8080-exec-9] (224479643988791296) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:20:27.967  INFO 5304 --- [http-nio-8080-exec-9] (224479643988791296) com.example.filter.RequestLogFilter      : 请求处理耗时: 8ms | 响应结果: {"id":224479643988791296,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:20:29.728  INFO 5304 --- [http-nio-8080-exec-10] (224479651408515072) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:20:29.730  INFO 5304 --- [http-nio-8080-exec-10] (224479651408515072) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224479651408515072,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:22:59.648  INFO 5304 --- [http-nio-8080-exec-2] (224480280214376448) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:22:59.648  INFO 5304 --- [http-nio-8080-exec-2] (224480280214376448) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224480280214376448,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:22:59.652  INFO 5304 --- [http-nio-8080-exec-3] (224480280235347968) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:22:59.655  INFO 5304 --- [http-nio-8080-exec-3] (224480280235347968) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224480280235347968,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:25:03.337  INFO 5304 --- [http-nio-8080-exec-5] (224480799007838208) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:25:03.338  INFO 5304 --- [http-nio-8080-exec-5] (224480799007838208) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224480799007838208,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:25:03.341  INFO 5304 --- [http-nio-8080-exec-6] (224480799024615424) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:25:03.344  INFO 5304 --- [http-nio-8080-exec-6] (224480799024615424) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224480799024615424,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:26:31.611  INFO 5304 --- [http-nio-8080-exec-8] (224481169255829504) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:26:31.612  INFO 5304 --- [http-nio-8080-exec-8] (224481169255829504) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224481169255829504,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:26:31.615  INFO 5304 --- [http-nio-8080-exec-9] (224481169272606720) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:26:31.618  INFO 5304 --- [http-nio-8080-exec-9] (224481169272606720) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224481169272606720,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:27:14.024  INFO 5304 --- [http-nio-8080-exec-10] (224481347148845056) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:27:14.025  INFO 5304 --- [http-nio-8080-exec-10] (224481347148845056) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224481347148845056,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:27:14.028  INFO 5304 --- [http-nio-8080-exec-1] (224481347165622272) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:27:14.030  INFO 5304 --- [http-nio-8080-exec-1] (224481347165622272) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224481347165622272,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:27:16.334  INFO 5304 --- [http-nio-8080-exec-2] (224481356837687296) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:27:16.337  INFO 5304 --- [http-nio-8080-exec-2] (224481356837687296) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224481356837687296,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:28:57.852  INFO 5304 --- [http-nio-8080-exec-4] (224481782635040768) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:28:57.852  INFO 5304 --- [http-nio-8080-exec-4] (224481782635040768) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224481782635040768,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:28:57.855  INFO 5304 --- [http-nio-8080-exec-5] (224481782647623680) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:28:57.857  INFO 5304 --- [http-nio-8080-exec-5] (224481782647623680) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224481782647623680,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:28:57.884  INFO 5304 --- [http-nio-8080-exec-6] (224481782769258496) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:28:57.886  INFO 5304 --- [http-nio-8080-exec-6] (224481782769258496) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224481782769258496,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:30:09.148  INFO 5304 --- [http-nio-8080-exec-8] (224482081672138752) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:30:09.149  INFO 5304 --- [http-nio-8080-exec-8] (224482081672138752) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224482081672138752,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:30:09.152  INFO 5304 --- [http-nio-8080-exec-9] (224482081688915968) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:30:09.155  INFO 5304 --- [http-nio-8080-exec-9] (224482081688915968) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224482081688915968,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:30:35.110  INFO 5304 --- [http-nio-8080-exec-10] (224482190564659200) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:30:35.110  INFO 5304 --- [http-nio-8080-exec-10] (224482190564659200) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224482190564659200,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:30:35.112  INFO 5304 --- [http-nio-8080-exec-1] (224482190573047808) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:30:35.115  INFO 5304 --- [http-nio-8080-exec-1] (224482190573047808) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224482190573047808,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:30:38.148  INFO 5304 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 13:30:38.298  INFO 5304 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 13:30:38.300  INFO 5304 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 13:30:38.467  INFO 5304 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 13:30:38.497  INFO 5304 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 13:30:38.499  INFO 5304 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 13:30:41.260  INFO 17936 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 17936 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 13:30:41.261  INFO 17936 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 13:30:41.748  INFO 17936 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 13:30:41.749  INFO 17936 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 13:30:41.768  INFO 17936 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-04-14 13:30:42.131  INFO 17936 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 13:30:42.139  INFO 17936 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 13:30:42.139  INFO 17936 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 13:30:42.172  INFO 17936 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 13:30:42.172  INFO 17936 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 890 ms
+2025-04-14 13:30:42.772  INFO 17936 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 13:30:43.122  INFO 17936 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 13:30:43.123  INFO 17936 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 13:30:43.147  INFO 17936 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2db461b5:0/SimpleConnection@15c3585 [delegate=amqp://admin@127.0.0.1:5672/, localPort=14316]
+2025-04-14 13:30:43.173  INFO 17936 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.243 seconds (process running for 2.579)
+2025-04-14 13:30:48.265  INFO 17936 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 13:30:48.265  INFO 17936 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 13:30:48.266  INFO 17936 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 13:30:48.534  INFO 17936 --- [http-nio-8080-exec-1] (224482246864801792) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:30:48.620  INFO 17936 --- [http-nio-8080-exec-1] (224482246864801792) com.example.filter.RequestLogFilter      : 请求处理耗时: 87ms | 响应结果: {"code":401,"data":null,"id":224482246864801792,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:30:48.648  INFO 17936 --- [http-nio-8080-exec-2] (224482247347146752) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:30:48.711  INFO 17936 --- [http-nio-8080-exec-2] (224482247347146752) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 13:30:48.856  INFO 17936 --- [http-nio-8080-exec-2] (224482247347146752) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a9646c9
+2025-04-14 13:30:48.856  INFO 17936 --- [http-nio-8080-exec-2] (224482247347146752) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 13:30:48.905  INFO 17936 --- [http-nio-8080-exec-2] (224482247347146752) com.example.filter.RequestLogFilter      : 请求处理耗时: 257ms | 响应结果: {"id":224482247347146752,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:31:37.620  INFO 17936 --- [http-nio-8080-exec-3] (224482452750602240) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:31:37.621  INFO 17936 --- [http-nio-8080-exec-3] (224482452750602240) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224482452750602240,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:31:37.624  INFO 17936 --- [http-nio-8080-exec-4] (224482452767379456) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:31:37.627  INFO 17936 --- [http-nio-8080-exec-4] (224482452767379456) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224482452767379456,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:31:37.630  INFO 17936 --- [http-nio-8080-exec-5] (224482452792545280) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:31:37.633  INFO 17936 --- [http-nio-8080-exec-5] (224482452792545280) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224482452792545280,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:31:40.343  INFO 17936 --- [http-nio-8080-exec-6] (224482464171692032) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:31:40.346  INFO 17936 --- [http-nio-8080-exec-6] (224482464171692032) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224482464171692032,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register":null},"message":"请求成功"}
+2025-04-14 13:31:43.442  INFO 17936 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 13:31:43.500  INFO 17936 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 13:31:43.500  INFO 17936 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 13:31:43.670  INFO 17936 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 13:31:43.681  INFO 17936 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 13:31:43.684  INFO 17936 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 13:31:46.371  INFO 7240 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 7240 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 13:31:46.372  INFO 7240 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 13:31:46.829  INFO 7240 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 13:31:46.831  INFO 7240 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 13:31:46.851  INFO 7240 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-04-14 13:31:47.212  INFO 7240 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 13:31:47.219  INFO 7240 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 13:31:47.220  INFO 7240 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 13:31:47.251  INFO 7240 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 13:31:47.252  INFO 7240 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 857 ms
+2025-04-14 13:31:47.833  INFO 7240 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 13:31:48.173  INFO 7240 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 13:31:48.174  INFO 7240 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 13:31:48.200  INFO 7240 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#43b172e3:0/SimpleConnection@5a010eec [delegate=amqp://admin@127.0.0.1:5672/, localPort=14390]
+2025-04-14 13:31:48.226  INFO 7240 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.154 seconds (process running for 2.426)
+2025-04-14 13:31:51.521  INFO 7240 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 13:31:51.521  INFO 7240 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 13:31:51.522  INFO 7240 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 13:31:51.766  INFO 7240 --- [http-nio-8080-exec-1] (224482512079032320) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:31:51.854  INFO 7240 --- [http-nio-8080-exec-1] (224482512079032320) com.example.filter.RequestLogFilter      : 请求处理耗时: 89ms | 响应结果: {"code":401,"data":null,"id":224482512079032320,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:31:51.881  INFO 7240 --- [http-nio-8080-exec-2] (224482512565571584) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:31:51.948  INFO 7240 --- [http-nio-8080-exec-2] (224482512565571584) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 13:31:52.087  INFO 7240 --- [http-nio-8080-exec-2] (224482512565571584) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e8b1d37
+2025-04-14 13:31:52.088  INFO 7240 --- [http-nio-8080-exec-2] (224482512565571584) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 13:31:52.140  INFO 7240 --- [http-nio-8080-exec-2] (224482512565571584) com.example.filter.RequestLogFilter      : 请求处理耗时: 259ms | 响应结果: {"id":224482512565571584,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 13:32:14.388  INFO 7240 --- [http-nio-8080-exec-3] (224482606966771712) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:32:14.388  INFO 7240 --- [http-nio-8080-exec-3] (224482606966771712) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224482606966771712,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:32:14.391  INFO 7240 --- [http-nio-8080-exec-6] (224482606979354624) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:32:14.393  INFO 7240 --- [http-nio-8080-exec-6] (224482606979354624) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224482606979354624,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 13:32:16.868  INFO 7240 --- [http-nio-8080-exec-5] (224482617368645632) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:32:16.871  INFO 7240 --- [http-nio-8080-exec-5] (224482617368645632) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224482617368645632,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 13:35:28.698  INFO 7240 --- [http-nio-8080-exec-7] (224483421961981952) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:35:28.698  INFO 7240 --- [http-nio-8080-exec-7] (224483421961981952) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224483421961981952,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:35:28.701  INFO 7240 --- [http-nio-8080-exec-9] (224483421974564864) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:35:28.704  INFO 7240 --- [http-nio-8080-exec-9] (224483421974564864) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224483421974564864,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 13:37:28.573  INFO 7240 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 13:37:29.168  INFO 7240 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 13:37:29.169  INFO 7240 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 13:37:29.330  INFO 7240 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 13:37:29.339  INFO 7240 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 13:37:29.342  INFO 7240 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 13:37:30.978  INFO 428 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 428 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 13:37:30.979  INFO 428 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 13:37:31.431  INFO 428 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 13:37:31.432  INFO 428 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 13:37:31.461  INFO 428 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2025-04-14 13:37:31.826  INFO 428 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 13:37:31.834  INFO 428 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 13:37:31.834  INFO 428 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 13:37:31.868  INFO 428 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 13:37:31.868  INFO 428 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 869 ms
+2025-04-14 13:37:32.481  INFO 428 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 13:37:32.831  INFO 428 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 13:37:32.833  INFO 428 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 13:37:32.853  INFO 428 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#39695803:0/SimpleConnection@623ded82 [delegate=amqp://admin@127.0.0.1:5672/, localPort=14552]
+2025-04-14 13:37:32.879  INFO 428 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.228 seconds (process running for 2.633)
+2025-04-14 13:37:37.212  INFO 428 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 13:37:37.212  INFO 428 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 13:37:37.213  INFO 428 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 13:37:37.461  INFO 428 --- [http-nio-8080-exec-1] (224483962028953600) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:37:37.558  INFO 428 --- [http-nio-8080-exec-1] (224483962028953600) com.example.filter.RequestLogFilter      : 请求处理耗时: 98ms | 响应结果: {"code":401,"data":null,"id":224483962028953600,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:37:37.585  INFO 428 --- [http-nio-8080-exec-2] (224483962553241600) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:37:37.645  INFO 428 --- [http-nio-8080-exec-2] (224483962553241600) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 13:37:37.774  INFO 428 --- [http-nio-8080-exec-2] (224483962553241600) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d01dd49
+2025-04-14 13:37:37.775  INFO 428 --- [http-nio-8080-exec-2] (224483962553241600) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 13:37:37.798 ERROR 428 --- [http-nio-8080-exec-2] (224483962553241600) o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.entity.dto.Account.asViewObject(java.lang.Class)" because "account" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.entity.dto.Account.asViewObject(java.lang.Class)" because "account" is null
+	at com.example.controller.AccountController.info(AccountController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.filter.RequestLogFilter.doFilterInternal(RequestLogFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:44)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.filter.FlowLimitingFilter.doFilter(FlowLimitingFilter.java:51)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.filter.CorsFilter.doFilter(CorsFilter.java:34)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-04-14 13:38:17.388  INFO 428 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 13:38:18.109  INFO 428 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 13:38:18.111  INFO 428 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 13:38:18.277  INFO 428 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 13:38:18.288  INFO 428 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 13:38:18.291  INFO 428 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 13:38:19.858  INFO 11764 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 11764 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 13:38:19.859  INFO 11764 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 13:38:20.334  INFO 11764 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 13:38:20.336  INFO 11764 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 13:38:20.353  INFO 11764 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-14 13:38:20.709  INFO 11764 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 13:38:20.717  INFO 11764 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 13:38:20.717  INFO 11764 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 13:38:20.750  INFO 11764 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 13:38:20.751  INFO 11764 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 869 ms
+2025-04-14 13:38:21.321  INFO 11764 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 13:38:21.656  INFO 11764 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 13:38:21.658  INFO 11764 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 13:38:21.682  INFO 11764 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#99c3cee:0/SimpleConnection@69fe8c75 [delegate=amqp://admin@127.0.0.1:5672/, localPort=14606]
+2025-04-14 13:38:21.707  INFO 11764 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.187 seconds (process running for 2.497)
+2025-04-14 13:38:26.127  INFO 11764 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 13:38:26.127  INFO 11764 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 13:38:26.128  INFO 11764 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 13:38:26.382  INFO 11764 --- [http-nio-8080-exec-1] (224484167218499584) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 13:38:26.468  INFO 11764 --- [http-nio-8080-exec-1] (224484167218499584) com.example.filter.RequestLogFilter      : 请求处理耗时: 87ms | 响应结果: {"code":401,"data":null,"id":224484167218499584,"message":"Full authentication is required to access this resource"}
+2025-04-14 13:38:26.496  INFO 11764 --- [http-nio-8080-exec-2] (224484167700844544) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 13:38:26.561  INFO 11764 --- [http-nio-8080-exec-2] (224484167700844544) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 13:38:26.693  INFO 11764 --- [http-nio-8080-exec-2] (224484167700844544) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e8b1d37
+2025-04-14 13:38:26.695  INFO 11764 --- [http-nio-8080-exec-2] (224484167700844544) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 13:38:26.745  INFO 11764 --- [http-nio-8080-exec-2] (224484167700844544) com.example.filter.RequestLogFilter      : 请求处理耗时: 249ms | 响应结果: {"id":224484167700844544,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 15:27:23.453  INFO 11764 --- [http-nio-8080-exec-5] (224511585673154560) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 15:27:23.477  INFO 11764 --- [http-nio-8080-exec-5] (224511585673154560) com.example.filter.RequestLogFilter      : 请求处理耗时: 27ms | 响应结果: {"code":401,"data":null,"id":224511585673154560,"message":"Full authentication is required to access this resource"}
+2025-04-14 15:27:23.493  INFO 11764 --- [http-nio-8080-exec-5] (224511585853509632) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 15:27:23.549  INFO 11764 --- [http-nio-8080-exec-5] (224511585853509632) com.example.filter.RequestLogFilter      : 请求处理耗时: 56ms | 响应结果: {"id":224511585853509632,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 16:28:27.680  INFO 11764 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 16:28:28.637  INFO 11764 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 16:28:28.654  INFO 11764 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 16:28:28.827  INFO 11764 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 16:28:28.871  INFO 11764 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 16:28:28.873  INFO 11764 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 16:28:31.786  INFO 29080 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 29080 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 16:28:31.787  INFO 29080 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 16:28:32.247  INFO 29080 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 16:28:32.249  INFO 29080 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 16:28:32.265  INFO 29080 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-14 16:28:32.629  INFO 29080 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 16:28:32.636  INFO 29080 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 16:28:32.636  INFO 29080 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 16:28:32.671  INFO 29080 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 16:28:32.671  INFO 29080 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 863 ms
+2025-04-14 16:28:33.225  WARN 29080 --- [main] (system) c.b.m.core.metadata.TableInfoHelper      : This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.example.entity.dto.AccountDetails"
+2025-04-14 16:28:33.325  INFO 29080 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 16:28:33.678  INFO 29080 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 16:28:33.680  INFO 29080 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 16:28:33.706  INFO 29080 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4b61e97:0/SimpleConnection@23cfdfa2 [delegate=amqp://admin@127.0.0.1:5672/, localPort=9119]
+2025-04-14 16:28:33.736  INFO 29080 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.281 seconds (process running for 2.605)
+2025-04-14 16:28:44.769  INFO 29080 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 16:28:45.733  INFO 29080 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 16:28:45.734  INFO 29080 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 16:28:45.894  INFO 29080 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 16:28:48.697  INFO 27448 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 27448 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 16:28:48.698  INFO 27448 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 16:28:49.153  INFO 27448 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 16:28:49.155  INFO 27448 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 16:28:49.171  INFO 27448 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-14 16:28:49.515  INFO 27448 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 16:28:49.521  INFO 27448 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 16:28:49.521  INFO 27448 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 16:28:49.553  INFO 27448 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 16:28:49.553  INFO 27448 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 833 ms
+2025-04-14 16:28:50.152  INFO 27448 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 16:28:50.504  INFO 27448 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 16:28:50.506  INFO 27448 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 16:28:50.534  INFO 27448 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#34eaf9c1:0/SimpleConnection@3331800f [delegate=amqp://admin@127.0.0.1:5672/, localPort=9140]
+2025-04-14 16:28:50.569  INFO 27448 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.189 seconds (process running for 2.504)
+2025-04-14 16:28:56.292  INFO 27448 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 16:28:56.292  INFO 27448 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 16:28:56.292  INFO 27448 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-14 16:28:56.566  INFO 27448 --- [http-nio-8080-exec-1] (224527075720171520) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 16:28:56.656  INFO 27448 --- [http-nio-8080-exec-1] (224527075720171520) com.example.filter.RequestLogFilter      : 请求处理耗时: 91ms | 响应结果: {"code":401,"data":null,"id":224527075720171520,"message":"Full authentication is required to access this resource"}
+2025-04-14 16:28:56.685  INFO 27448 --- [http-nio-8080-exec-2] (224527076223488000) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 16:28:56.747  INFO 27448 --- [http-nio-8080-exec-2] (224527076223488000) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 16:28:56.897  INFO 27448 --- [http-nio-8080-exec-2] (224527076223488000) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52cd58fa
+2025-04-14 16:28:56.898  INFO 27448 --- [http-nio-8080-exec-2] (224527076223488000) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 16:28:56.951  INFO 27448 --- [http-nio-8080-exec-2] (224527076223488000) com.example.filter.RequestLogFilter      : 请求处理耗时: 266ms | 响应结果: {"id":224527076223488000,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 16:29:00.098  INFO 27448 --- [http-nio-8080-exec-4] (224527090538647552) com.example.filter.RequestLogFilter      : 请求URL: "/api/auth/logout" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 16:29:00.110  INFO 27448 --- [http-nio-8080-exec-4] (224527090538647552) com.example.filter.RequestLogFilter      : 请求处理耗时: 12ms | 响应结果: 
+2025-04-14 16:29:02.476  INFO 27448 --- [http-nio-8080-exec-3] (224527100508508160) com.example.filter.RequestLogFilter      : 请求URL: "/api/auth/login" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {"username":"Y1Suuu@163.com","password":"123456"}
+2025-04-14 16:29:02.622  INFO 27448 --- [http-nio-8080-exec-3] (224527100508508160) com.example.filter.RequestLogFilter      : 请求处理耗时: 147ms | 响应结果: {"code":200,"data":{"expire":"2025-04-17 16:29:02.618","role":"user","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5LiA57KfIiwiaWQiOjcsImV4cCI6MTc0NDg3ODU0MiwiaWF0IjoxNzQ0NjE5MzQyLCJqdGkiOiI5NzJmNmVhMS1kNWU5LTQzYjQtYWI4YS1jM2M3M2JmOTYxZGUiLCJhdXRob3JpdGllcyI6WyJST0xFX3VzZXIiXX0.vrCvdXq71lWK0gSV4dD8ZQspVxPDQ9J9AGIt1lQbgSI","username":"一粟"},"id":224527100508508160,"message":"请求成功"}
+2025-04-14 16:29:02.640  INFO 27448 --- [http-nio-8080-exec-6] (224527101200568320) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 16:29:02.640  INFO 27448 --- [http-nio-8080-exec-6] (224527101200568320) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224527101200568320,"message":"Full authentication is required to access this resource"}
+2025-04-14 16:29:02.645  INFO 27448 --- [http-nio-8080-exec-7] (224527101221539840) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 16:29:02.648  INFO 27448 --- [http-nio-8080-exec-7] (224527101221539840) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224527101221539840,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 16:29:39.005  INFO 27448 --- [http-nio-8080-exec-8] (224527253726433280) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 16:29:39.006  INFO 27448 --- [http-nio-8080-exec-8] (224527253726433280) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224527253726433280,"message":"Full authentication is required to access this resource"}
+2025-04-14 16:29:39.010  INFO 27448 --- [http-nio-8080-exec-9] (224527253747404800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 16:29:39.013  INFO 27448 --- [http-nio-8080-exec-9] (224527253747404800) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224527253747404800,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 16:35:45.880  INFO 27448 --- [http-nio-8080-exec-1] (224528792507518976) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 16:35:45.881  INFO 27448 --- [http-nio-8080-exec-1] (224528792507518976) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"code":401,"data":null,"id":224528792507518976,"message":"Full authentication is required to access this resource"}
+2025-04-14 16:35:45.884  INFO 27448 --- [http-nio-8080-exec-2] (224528792528490496) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 16:35:45.888  INFO 27448 --- [http-nio-8080-exec-2] (224528792528490496) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224528792528490496,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 20:34:28.216  INFO 27448 --- [http-nio-8080-exec-5] (224588864742887424) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 20:34:28.217  INFO 27448 --- [http-nio-8080-exec-5] (224588864742887424) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224588864742887424,"message":"Full authentication is required to access this resource"}
+2025-04-14 20:34:28.220  INFO 27448 --- [http-nio-8080-exec-3] (224588864759664640) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 20:34:28.225  INFO 27448 --- [http-nio-8080-exec-3] (224588864759664640) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224588864759664640,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 20:34:32.327  INFO 27448 --- [http-nio-8080-exec-6] (224588881985671168) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 20:34:32.330  INFO 27448 --- [http-nio-8080-exec-6] (224588881985671168) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224588881985671168,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 21:35:10.588  INFO 7348 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 7348 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 21:35:10.589  INFO 7348 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 21:35:11.144  INFO 7348 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 21:35:11.146  INFO 7348 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 21:35:11.168  INFO 7348 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-04-14 21:35:11.563  INFO 7348 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 21:35:11.570  INFO 7348 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 21:35:11.570  INFO 7348 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 21:35:11.604  INFO 7348 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 21:35:11.604  INFO 7348 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 992 ms
+2025-04-14 21:35:12.306  INFO 7348 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 21:35:12.697  INFO 7348 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 21:35:12.699  INFO 7348 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 21:35:12.745  INFO 7348 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6282f1eb:0/SimpleConnection@1018f702 [delegate=amqp://admin@127.0.0.1:5672/, localPort=10882]
+2025-04-14 21:35:12.773  INFO 7348 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.555 seconds (process running for 2.99)
+2025-04-14 21:35:17.489  INFO 7348 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 21:35:17.489  INFO 7348 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 21:35:17.490  INFO 7348 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 21:35:17.716 ERROR 7348 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1858)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1789)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1586)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1566)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1527)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1563)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1249)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:1055)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:195)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:398)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:378)
+	at org.springframework.data.redis.core.RedisTemplate.doWithKeys(RedisTemplate.java:790)
+	at org.springframework.data.redis.core.RedisTemplate.hasKey(RedisTemplate.java:576)
+	at com.example.filter.FlowLimitingFilter.tryCount(FlowLimitingFilter.java:61)
+	at com.example.filter.FlowLimitingFilter.doFilter(FlowLimitingFilter.java:48)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.filter.CorsFilter.doFilter(CorsFilter.java:34)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:63)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:41)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:354)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:219)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1787)
+	... 50 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:784)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-04-14 21:35:32.188  INFO 7348 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 21:35:32.922  INFO 7348 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 21:35:32.923  INFO 7348 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 21:35:33.137  INFO 7348 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 21:35:34.978  INFO 21096 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 21096 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 21:35:34.979  INFO 21096 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 21:35:35.470  INFO 21096 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 21:35:35.471  INFO 21096 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 21:35:35.489  INFO 21096 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-04-14 21:35:35.853  INFO 21096 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 21:35:35.860  INFO 21096 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 21:35:35.860  INFO 21096 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 21:35:35.893  INFO 21096 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 21:35:35.893  INFO 21096 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 883 ms
+2025-04-14 21:35:36.506  INFO 21096 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 21:35:36.868  INFO 21096 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 21:35:36.870  INFO 21096 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 21:35:36.890  INFO 21096 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#31082efa:0/SimpleConnection@4880a9d [delegate=amqp://admin@127.0.0.1:5672/, localPort=10927]
+2025-04-14 21:35:36.916  INFO 21096 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 2.44 seconds (process running for 2.732)
+2025-04-14 21:35:41.498  INFO 21096 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 21:35:41.498  INFO 21096 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 21:35:41.500  INFO 21096 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 21:35:41.780  INFO 21096 --- [http-nio-8080-exec-1] (224604272782872576) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 21:35:41.886  INFO 21096 --- [http-nio-8080-exec-1] (224604272782872576) com.example.filter.RequestLogFilter      : 请求处理耗时: 107ms | 响应结果: {"code":401,"data":null,"id":224604272782872576,"message":"Full authentication is required to access this resource"}
+2025-04-14 21:35:41.917  INFO 21096 --- [http-nio-8080-exec-2] (224604273361686528) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 21:35:41.983  INFO 21096 --- [http-nio-8080-exec-2] (224604273361686528) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 21:35:42.156  INFO 21096 --- [http-nio-8080-exec-2] (224604273361686528) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79adf640
+2025-04-14 21:35:42.157  INFO 21096 --- [http-nio-8080-exec-2] (224604273361686528) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 21:35:42.211  INFO 21096 --- [http-nio-8080-exec-2] (224604273361686528) com.example.filter.RequestLogFilter      : 请求处理耗时: 294ms | 响应结果: {"id":224604273361686528,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 21:35:58.819  INFO 21096 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 21:35:59.077  INFO 21096 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 21:35:59.077  INFO 21096 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 21:35:59.249  INFO 21096 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 21:35:59.260  INFO 21096 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 21:35:59.264  INFO 21096 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 21:57:09.554  INFO 28504 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 28504 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 21:57:09.557  INFO 28504 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 21:57:10.409  INFO 28504 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 21:57:10.411  INFO 28504 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 21:57:10.433  INFO 28504 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-04-14 21:57:10.930  INFO 28504 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 21:57:10.939  INFO 28504 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 21:57:10.940  INFO 28504 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 21:57:10.979  INFO 28504 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 21:57:10.980  INFO 28504 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1379 ms
+2025-04-14 21:57:11.797  INFO 28504 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 21:57:12.274  INFO 28504 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 21:57:12.276  INFO 28504 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 21:57:12.313  INFO 28504 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3de45b6c:0/SimpleConnection@5b86f4cb [delegate=amqp://admin@127.0.0.1:5672/, localPort=7855]
+2025-04-14 21:57:12.349  INFO 28504 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 3.388 seconds (process running for 3.938)
+2025-04-14 22:06:33.241  INFO 28504 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 22:06:33.241  INFO 28504 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 22:06:33.242  INFO 28504 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 22:06:33.596  INFO 28504 --- [http-nio-8080-exec-1] (224612039857934336) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:06:33.723  INFO 28504 --- [http-nio-8080-exec-1] (224612039857934336) com.example.filter.RequestLogFilter      : 请求处理耗时: 129ms | 响应结果: {"code":401,"data":null,"id":224612039857934336,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:06:33.766  INFO 28504 --- [http-nio-8080-exec-2] (224612040579354624) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:06:33.854  INFO 28504 --- [http-nio-8080-exec-2] (224612040579354624) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 22:06:34.063  INFO 28504 --- [http-nio-8080-exec-2] (224612040579354624) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c61f68a
+2025-04-14 22:06:34.065  INFO 28504 --- [http-nio-8080-exec-2] (224612040579354624) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 22:06:34.140  INFO 28504 --- [http-nio-8080-exec-2] (224612040579354624) com.example.filter.RequestLogFilter      : 请求处理耗时: 374ms | 响应结果: {"id":224612040579354624,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:09:19.292  INFO 28504 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 22:09:20.282  INFO 28504 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 22:09:20.283  INFO 28504 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 22:09:20.601  INFO 28504 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 22:09:20.619  INFO 28504 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 22:09:20.626  INFO 28504 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 22:14:47.567  INFO 30660 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 30660 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 22:14:47.569  INFO 30660 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 22:14:48.546  INFO 30660 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 22:14:48.550  INFO 30660 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 22:14:48.582  INFO 30660 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-04-14 22:14:49.248  INFO 30660 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 22:14:49.261  INFO 30660 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 22:14:49.261  INFO 30660 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 22:14:49.321  INFO 30660 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 22:14:49.321  INFO 30660 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1715 ms
+2025-04-14 22:14:50.503  INFO 30660 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 22:14:51.201  INFO 30660 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 22:14:51.205  INFO 30660 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 22:14:51.253  INFO 30660 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5a205ee5:0/SimpleConnection@79ae3fb1 [delegate=amqp://admin@127.0.0.1:5672/, localPort=10259]
+2025-04-14 22:14:51.296  INFO 30660 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 4.357 seconds (process running for 5.132)
+2025-04-14 22:15:07.137  INFO 30660 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 22:15:07.137  INFO 30660 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 22:15:07.138  INFO 30660 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 22:15:07.657  INFO 30660 --- [http-nio-8080-exec-1] (224614195981848576) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:15:07.836  INFO 30660 --- [http-nio-8080-exec-1] (224614195981848576) com.example.filter.RequestLogFilter      : 请求处理耗时: 182ms | 响应结果: {"code":401,"data":null,"id":224614195981848576,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:15:07.892  INFO 30660 --- [http-nio-8080-exec-2] (224614196980092928) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:15:08.025  INFO 30660 --- [http-nio-8080-exec-2] (224614196980092928) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 22:15:08.304  INFO 30660 --- [http-nio-8080-exec-2] (224614196980092928) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f9da7c1
+2025-04-14 22:15:08.307  INFO 30660 --- [http-nio-8080-exec-2] (224614196980092928) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 22:15:08.420  INFO 30660 --- [http-nio-8080-exec-2] (224614196980092928) com.example.filter.RequestLogFilter      : 请求处理耗时: 528ms | 响应结果: {"id":224614196980092928,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:19:02.064  INFO 30660 --- [http-nio-8080-exec-4] (224615179168649216) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:19:02.065  INFO 30660 --- [http-nio-8080-exec-4] (224615179168649216) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224615179168649216,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:19:02.069  INFO 30660 --- [http-nio-8080-exec-5] (224615179189620736) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:19:02.074  INFO 30660 --- [http-nio-8080-exec-5] (224615179189620736) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224615179189620736,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:19:17.407  INFO 30660 --- [http-nio-8080-exec-6] (224615243521855488) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:19:17.408  INFO 30660 --- [http-nio-8080-exec-6] (224615243521855488) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224615243521855488,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:19:17.411  INFO 30660 --- [http-nio-8080-exec-7] (224615243538632704) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:19:17.416  INFO 30660 --- [http-nio-8080-exec-7] (224615243538632704) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224615243538632704,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:20:29.389  INFO 30660 --- [http-nio-8080-exec-9] (224615545436246016) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:20:29.389  INFO 30660 --- [http-nio-8080-exec-9] (224615545436246016) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224615545436246016,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:20:29.395  INFO 30660 --- [http-nio-8080-exec-10] (224615545461411840) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:20:29.400  INFO 30660 --- [http-nio-8080-exec-10] (224615545461411840) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224615545461411840,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:24:15.516  INFO 30660 --- [http-nio-8080-exec-2] (224616493881626624) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:24:15.517  INFO 30660 --- [http-nio-8080-exec-2] (224616493881626624) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224616493881626624,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:24:15.522  INFO 30660 --- [http-nio-8080-exec-3] (224616493906792448) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:24:15.526  INFO 30660 --- [http-nio-8080-exec-3] (224616493906792448) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224616493906792448,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:24:16.727  INFO 30660 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 22:24:17.450  INFO 30660 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 22:24:17.451  INFO 30660 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 22:24:17.669  INFO 30660 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 22:24:17.684  INFO 30660 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 22:24:17.688  INFO 30660 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 22:24:19.696  INFO 31596 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 31596 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 22:24:19.698  INFO 31596 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 22:24:20.331  INFO 31596 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 22:24:20.332  INFO 31596 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 22:24:20.353  INFO 31596 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-04-14 22:24:20.827  INFO 31596 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 22:24:20.837  INFO 31596 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 22:24:20.837  INFO 31596 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 22:24:20.880  INFO 31596 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 22:24:20.880  INFO 31596 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1155 ms
+2025-04-14 22:24:21.696  INFO 31596 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 22:24:22.178  INFO 31596 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 22:24:22.180  INFO 31596 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 22:24:22.207  INFO 31596 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#248b2b61:0/SimpleConnection@257d3968 [delegate=amqp://admin@127.0.0.1:5672/, localPort=2686]
+2025-04-14 22:24:22.244  INFO 31596 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 3.027 seconds (process running for 3.5)
+2025-04-14 22:24:27.844  INFO 31596 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 22:24:27.844  INFO 31596 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 22:24:27.845  INFO 31596 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 22:24:28.175  INFO 31596 --- [http-nio-8080-exec-1] (224616546973126656) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:24:28.287  INFO 31596 --- [http-nio-8080-exec-1] (224616546973126656) com.example.filter.RequestLogFilter      : 请求处理耗时: 113ms | 响应结果: {"code":401,"data":null,"id":224616546973126656,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:24:28.327  INFO 31596 --- [http-nio-8080-exec-2] (224616547614855168) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:24:28.415  INFO 31596 --- [http-nio-8080-exec-2] (224616547614855168) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 22:24:28.612  INFO 31596 --- [http-nio-8080-exec-2] (224616547614855168) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a9c3520
+2025-04-14 22:24:28.615  INFO 31596 --- [http-nio-8080-exec-2] (224616547614855168) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 22:24:28.677  INFO 31596 --- [http-nio-8080-exec-2] (224616547614855168) com.example.filter.RequestLogFilter      : 请求处理耗时: 350ms | 响应结果: {"id":224616547614855168,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:26:44.197  INFO 31596 --- [http-nio-8080-exec-6] (224617117494939648) com.example.filter.RequestLogFilter      : 请求URL: "/" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:26:44.199  INFO 31596 --- [http-nio-8080-exec-6] (224617117494939648) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"code":401,"data":null,"id":224617117494939648,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:26:44.203  INFO 31596 --- [http-nio-8080-exec-5] (224617117520105472) com.example.filter.RequestLogFilter      : 请求URL: "/" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:26:44.219  INFO 31596 --- [http-nio-8080-exec-5] (224617117520105472) com.example.filter.RequestLogFilter      : 请求处理耗时: 16ms | 响应结果: 404 错误
+2025-04-14 22:26:50.429  INFO 31596 --- [http-nio-8080-exec-4] (224617143633842176) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:26:50.429  INFO 31596 --- [http-nio-8080-exec-4] (224617143633842176) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224617143633842176,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:26:50.434  INFO 31596 --- [http-nio-8080-exec-8] (224617143654813696) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:26:50.608 ERROR 31596 --- [http-nio-8080-exec-8] (224617143654813696) o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc FROM db_account_details WHERE id=7' at line 1
+### The error may exist in com/example/mapper/AccountDetailsMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,gender,phone,qq,wx,desc FROM db_account_details WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc FROM db_account_details WHERE id=7' at line 1
+; bad SQL grammar []] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc FROM db_account_details WHERE id=7' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:382)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy97.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:87)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:155)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:92)
+	at jdk.proxy2/jdk.proxy2.$Proxy103.selectById(Unknown Source)
+	at com.baomidou.mybatisplus.extension.repository.IRepository.getById(IRepository.java:183)
+	at com.example.service.impl.AccountDetailsServiceImpl.findAccountDetailsById(AccountDetailsServiceImpl.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
+	at com.example.service.impl.AccountDetailsServiceImpl$$SpringCGLIB$$0.findAccountDetailsById(<generated>)
+	at com.example.controller.AccountController.details(AccountController.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.filter.RequestLogFilter.doFilterInternal(RequestLogFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:44)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.filter.FlowLimitingFilter.doFilter(FlowLimitingFilter.java:51)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.filter.CorsFilter.doFilter(CorsFilter.java:34)
+	at jakarta.servlet.http.HttpFilter.doFilter(HttpFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-04-14 22:29:58.374  INFO 31596 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 22:29:58.827  INFO 31596 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 22:29:58.828  INFO 31596 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 22:29:59.109  INFO 31596 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 22:29:59.126  INFO 31596 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 22:29:59.132  INFO 31596 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 22:30:03.202  INFO 26140 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 26140 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 22:30:03.204  INFO 26140 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 22:30:03.913  INFO 26140 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 22:30:03.915  INFO 26140 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 22:30:03.937  INFO 26140 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-04-14 22:30:04.428  INFO 26140 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 22:30:04.439  INFO 26140 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 22:30:04.439  INFO 26140 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 22:30:04.487  INFO 26140 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 22:30:04.487  INFO 26140 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
+2025-04-14 22:30:05.404  INFO 26140 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 22:30:05.883  INFO 26140 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 22:30:05.885  INFO 26140 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 22:30:05.913  INFO 26140 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#31082efa:0/SimpleConnection@152d2a58 [delegate=amqp://admin@127.0.0.1:5672/, localPort=1648]
+2025-04-14 22:30:05.949  INFO 26140 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 3.228 seconds (process running for 3.754)
+2025-04-14 22:30:51.270  INFO 26140 --- [http-nio-8080-exec-1] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 22:30:51.270  INFO 26140 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 22:30:51.271  INFO 26140 --- [http-nio-8080-exec-1] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-14 22:30:51.628  INFO 26140 --- [http-nio-8080-exec-1] (224618155287384064) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:30:51.748  INFO 26140 --- [http-nio-8080-exec-1] (224618155287384064) com.example.filter.RequestLogFilter      : 请求处理耗时: 122ms | 响应结果: {"code":401,"data":null,"id":224618155287384064,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:30:51.791  INFO 26140 --- [http-nio-8080-exec-2] (224618155975249920) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:30:51.876  INFO 26140 --- [http-nio-8080-exec-2] (224618155975249920) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 22:30:52.094  INFO 26140 --- [http-nio-8080-exec-2] (224618155975249920) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f6c4092
+2025-04-14 22:30:52.095  INFO 26140 --- [http-nio-8080-exec-2] (224618155975249920) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 22:30:52.171  INFO 26140 --- [http-nio-8080-exec-2] (224618155975249920) com.example.filter.RequestLogFilter      : 请求处理耗时: 381ms | 响应结果: {"id":224618155975249920,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:30:52.213  INFO 26140 --- [http-nio-8080-exec-3] (224618157745246208) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:30:52.213  INFO 26140 --- [http-nio-8080-exec-3] (224618157745246208) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224618157745246208,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:30:52.216  INFO 26140 --- [http-nio-8080-exec-7] (224618157762023424) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:30:52.222  INFO 26140 --- [http-nio-8080-exec-7] (224618157762023424) com.example.filter.RequestLogFilter      : 请求处理耗时: 6ms | 响应结果: {"id":224618157762023424,"code":200,"data":{"gender":0,"phone":null,"qq":null,"wx":null,"desc":null},"message":"请求成功"}
+2025-04-14 22:42:14.013  INFO 26140 --- [http-nio-8080-exec-9] (224621017425907712) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:42:14.014  INFO 26140 --- [http-nio-8080-exec-9] (224621017425907712) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621017425907712,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:42:14.019  INFO 26140 --- [http-nio-8080-exec-4] (224621017446879232) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:42:14.023  INFO 26140 --- [http-nio-8080-exec-4] (224621017446879232) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224621017446879232,"code":200,"data":{"gender":0,"phone":null,"qq":null,"wx":null,"desc":null},"message":"请求成功"}
+2025-04-14 22:43:12.472  INFO 26140 --- [http-nio-8080-exec-6] (224621262620725248) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:43:12.473  INFO 26140 --- [http-nio-8080-exec-6] (224621262620725248) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621262620725248,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:43:12.477  INFO 26140 --- [http-nio-8080-exec-10] (224621262641696768) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:43:12.481  INFO 26140 --- [http-nio-8080-exec-10] (224621262641696768) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224621262641696768,"code":200,"data":{"gender":0,"phone":null,"qq":null,"wx":null,"desc":null},"message":"请求成功"}
+2025-04-14 22:45:52.167  INFO 26140 --- [http-nio-8080-exec-2] (224621932430102528) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:45:52.168  INFO 26140 --- [http-nio-8080-exec-2] (224621932430102528) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621932430102528,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:45:52.172  INFO 26140 --- [http-nio-8080-exec-3] (224621932451074048) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:45:52.175  INFO 26140 --- [http-nio-8080-exec-3] (224621932451074048) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224621932451074048,"code":200,"data":{"gender":0,"phone":null,"qq":null,"wx":null,"desc":null},"message":"请求成功"}
+2025-04-14 22:45:56.230  INFO 26140 --- [http-nio-8080-exec-7] (224621949471559680) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:45:56.231  INFO 26140 --- [http-nio-8080-exec-7] (224621949471559680) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621949471559680,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:45:56.235  INFO 26140 --- [http-nio-8080-exec-5] (224621949492531200) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:45:56.240  INFO 26140 --- [http-nio-8080-exec-5] (224621949492531200) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224621949492531200,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:45:56.285  INFO 26140 --- [http-nio-8080-exec-9] (224621949702246400) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:45:56.287  INFO 26140 --- [http-nio-8080-exec-9] (224621949702246400) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224621949702246400,"code":200,"data":{"gender":0,"phone":null,"qq":null,"wx":null,"desc":null},"message":"请求成功"}
+2025-04-14 22:46:02.254  INFO 26140 --- [http-nio-8080-exec-4] (224621974738046976) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:46:02.255  INFO 26140 --- [http-nio-8080-exec-4] (224621974738046976) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621974738046976,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:46:02.260  INFO 26140 --- [http-nio-8080-exec-8] (224621974763212800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:46:02.264  INFO 26140 --- [http-nio-8080-exec-8] (224621974763212800) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224621974763212800,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:46:02.291  INFO 26140 --- [http-nio-8080-exec-6] (224621974893236224) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:46:02.292  INFO 26140 --- [http-nio-8080-exec-6] (224621974893236224) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621974893236224,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:46:02.295  INFO 26140 --- [http-nio-8080-exec-10] (224621974910013440) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:46:02.297  INFO 26140 --- [http-nio-8080-exec-10] (224621974910013440) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224621974910013440,"code":200,"data":{"gender":0,"phone":null,"qq":null,"wx":null,"desc":null},"message":"请求成功"}
+2025-04-14 22:46:03.320  INFO 26140 --- [http-nio-8080-exec-1] (224621979209175040) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:46:03.321  INFO 26140 --- [http-nio-8080-exec-1] (224621979209175040) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224621979209175040,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:46:03.324  INFO 26140 --- [http-nio-8080-exec-2] (224621979225952256) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:46:03.433  INFO 26140 --- [http-nio-8080-exec-2] (224621979225952256) com.example.filter.RequestLogFilter      : 请求处理耗时: 109ms | 响应结果: {"id":224621979225952256,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 22:48:12.563  INFO 26140 --- [http-nio-8080-exec-7] (224622521293606912) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:48:12.564  INFO 26140 --- [http-nio-8080-exec-7] (224622521293606912) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224622521293606912,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:48:12.567  INFO 26140 --- [http-nio-8080-exec-5] (224622521310384128) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:48:12.605  INFO 26140 --- [http-nio-8080-exec-5] (224622521310384128) com.example.filter.RequestLogFilter      : 请求处理耗时: 38ms | 响应结果: {"id":224622521310384128,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 22:48:55.102  INFO 26140 --- [http-nio-8080-exec-9] (224622699715104768) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:48:55.102  INFO 26140 --- [http-nio-8080-exec-9] (224622699715104768) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224622699715104768,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:48:55.105  INFO 26140 --- [http-nio-8080-exec-4] (224622699727687680) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:48:55.118  INFO 26140 --- [http-nio-8080-exec-4] (224622699727687680) com.example.filter.RequestLogFilter      : 请求处理耗时: 13ms | 响应结果: {"id":224622699727687680,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 22:49:09.071  INFO 26140 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-14 22:49:09.502  INFO 26140 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] (system) o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-14 22:49:09.503  INFO 26140 --- [SpringApplicationShutdownHook] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 22:49:09.741  INFO 26140 --- [tomcat-shutdown] (system) o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-14 22:49:09.758  INFO 26140 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-14 22:49:09.764  INFO 26140 --- [SpringApplicationShutdownHook] (system) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-14 22:49:24.515  INFO 30848 --- [main] (system) c.example.MyProjectBackendApplication    : Starting MyProjectBackendApplication using Java 17.0.12 with PID 30848 (C:\Users\SUYU\Desktop\my-project\my-project-backend\target\classes started by SUYU in C:\Users\SUYU\Desktop\my-project)
+2025-04-14 22:49:24.517  INFO 30848 --- [main] (system) c.example.MyProjectBackendApplication    : The following 1 profile is active: "dev"
+2025-04-14 22:49:25.297  INFO 30848 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-14 22:49:25.299  INFO 30848 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-14 22:49:25.333  INFO 30848 --- [main] (system) .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2025-04-14 22:49:25.971  INFO 30848 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-14 22:49:25.985  INFO 30848 --- [main] (system) o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-14 22:49:25.985  INFO 30848 --- [main] (system) o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 22:49:26.042  INFO 30848 --- [main] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-14 22:49:26.042  INFO 30848 --- [main] (system) w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1493 ms
+2025-04-14 22:49:27.092  INFO 30848 --- [main] (system) r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountServiceImpl
+2025-04-14 22:49:27.682  INFO 30848 --- [main] (system) o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 22:49:27.685  INFO 30848 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-04-14 22:49:27.716  INFO 30848 --- [main] (system) o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#11d1735e:0/SimpleConnection@75507e68 [delegate=amqp://admin@127.0.0.1:5672/, localPort=8312]
+2025-04-14 22:49:27.759  INFO 30848 --- [main] (system) c.example.MyProjectBackendApplication    : Started MyProjectBackendApplication in 3.754 seconds (process running for 4.226)
+2025-04-14 22:49:28.485  INFO 30848 --- [http-nio-8080-exec-3] (system) o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 22:49:28.485  INFO 30848 --- [http-nio-8080-exec-3] (system) o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-14 22:49:28.486  INFO 30848 --- [http-nio-8080-exec-3] (system) o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-14 22:49:28.887  INFO 30848 --- [http-nio-8080-exec-3] (224622841415471104) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:49:29.020  INFO 30848 --- [http-nio-8080-exec-3] (224622841415471104) com.example.filter.RequestLogFilter      : 请求处理耗时: 134ms | 响应结果: {"code":401,"data":null,"id":224622841415471104,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:49:29.061  INFO 30848 --- [http-nio-8080-exec-1] (224622842149474304) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:49:29.243  INFO 30848 --- [http-nio-8080-exec-1] (224622842149474304) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-14 22:49:29.522  INFO 30848 --- [http-nio-8080-exec-1] (224622842149474304) com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@620a38f3
+2025-04-14 22:49:29.523  INFO 30848 --- [http-nio-8080-exec-1] (224622842149474304) com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-14 22:49:29.619  INFO 30848 --- [http-nio-8080-exec-1] (224622842149474304) com.example.filter.RequestLogFilter      : 请求处理耗时: 558ms | 响应结果: {"id":224622842149474304,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 22:49:34.504  INFO 30848 --- [http-nio-8080-exec-2] (224622864979070976) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:49:34.505  INFO 30848 --- [http-nio-8080-exec-2] (224622864979070976) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224622864979070976,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:49:34.510  INFO 30848 --- [http-nio-8080-exec-8] (224622865004236800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:49:34.520  INFO 30848 --- [http-nio-8080-exec-8] (224622865004236800) com.example.filter.RequestLogFilter      : 请求处理耗时: 10ms | 响应结果: {"id":224622865004236800,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 22:49:34.566  INFO 30848 --- [http-nio-8080-exec-5] (224622865234923520) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 22:49:34.566  INFO 30848 --- [http-nio-8080-exec-5] (224622865234923520) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224622865234923520,"message":"Full authentication is required to access this resource"}
+2025-04-14 22:49:34.570  INFO 30848 --- [http-nio-8080-exec-6] (224622865255895040) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 22:49:34.576  INFO 30848 --- [http-nio-8080-exec-6] (224622865255895040) com.example.filter.RequestLogFilter      : 请求处理耗时: 6ms | 响应结果: {"id":224622865255895040,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:02:40.204  INFO 30848 --- [http-nio-8080-exec-9] (224626160443723776) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:02:40.205  INFO 30848 --- [http-nio-8080-exec-9] (224626160443723776) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224626160443723776,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:02:40.209  INFO 30848 --- [http-nio-8080-exec-4] (224626160464695296) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:02:40.213  INFO 30848 --- [http-nio-8080-exec-4] (224626160464695296) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224626160464695296,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:02:49.508  INFO 30848 --- [http-nio-8080-exec-3] (224626199467528192) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:02:49.509  INFO 30848 --- [http-nio-8080-exec-3] (224626199467528192) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224626199467528192,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:02:49.512  INFO 30848 --- [http-nio-8080-exec-1] (224626199484305408) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:02:49.514  INFO 30848 --- [http-nio-8080-exec-1] (224626199484305408) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224626199484305408,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:02:54.009  INFO 30848 --- [http-nio-8080-exec-2] (224626218346090496) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:02:54.012  INFO 30848 --- [http-nio-8080-exec-2] (224626218346090496) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224626218346090496,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:03:06.151  INFO 30848 --- [http-nio-8080-exec-5] (224626269273329664) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:03:06.151  INFO 30848 --- [http-nio-8080-exec-5] (224626269273329664) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224626269273329664,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:03:06.154  INFO 30848 --- [http-nio-8080-exec-6] (224626269285912576) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:03:06.157  INFO 30848 --- [http-nio-8080-exec-6] (224626269285912576) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224626269285912576,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:14:08.767  INFO 30848 --- [http-nio-8080-exec-9] (224629048486268928) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:14:08.768  INFO 30848 --- [http-nio-8080-exec-9] (224629048486268928) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224629048486268928,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:14:08.775  INFO 30848 --- [http-nio-8080-exec-4] (224629048519823360) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:14:08.780  INFO 30848 --- [http-nio-8080-exec-4] (224629048519823360) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224629048519823360,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 23:14:08.822  INFO 30848 --- [http-nio-8080-exec-10] (224629048716955648) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:14:08.822  INFO 30848 --- [http-nio-8080-exec-10] (224629048716955648) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224629048716955648,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:14:08.825  INFO 30848 --- [http-nio-8080-exec-3] (224629048729538560) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:14:08.827  INFO 30848 --- [http-nio-8080-exec-3] (224629048729538560) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224629048729538560,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:14:10.242  INFO 30848 --- [http-nio-8080-exec-2] (224629054672867328) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:14:10.243  INFO 30848 --- [http-nio-8080-exec-2] (224629054672867328) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224629054672867328,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:14:10.246  INFO 30848 --- [http-nio-8080-exec-8] (224629054689644544) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:14:10.266  INFO 30848 --- [http-nio-8080-exec-8] (224629054689644544) com.example.filter.RequestLogFilter      : 请求处理耗时: 20ms | 响应结果: {"id":224629054689644544,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 23:14:11.403  INFO 30848 --- [http-nio-8080-exec-5] (224629059542454272) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:14:11.418  INFO 30848 --- [http-nio-8080-exec-5] (224629059542454272) com.example.filter.RequestLogFilter      : 请求处理耗时: 15ms | 响应结果: {"id":224629059542454272,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 23:14:11.840  INFO 30848 --- [http-nio-8080-exec-6] (224629061375365120) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/save-details" (POST) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:14:11.850  INFO 30848 --- [http-nio-8080-exec-6] (224629061375365120) com.example.filter.RequestLogFilter      : 请求处理耗时: 10ms | 响应结果: {"id":224629061375365120,"code":200,"data":null,"message":"请求成功"}
+2025-04-14 23:19:57.318  INFO 30848 --- [http-nio-8080-exec-9] (224630510415122432) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:19:57.319  INFO 30848 --- [http-nio-8080-exec-9] (224630510415122432) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224630510415122432,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:19:57.322  INFO 30848 --- [http-nio-8080-exec-4] (224630510431899648) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:19:57.327  INFO 30848 --- [http-nio-8080-exec-4] (224630510431899648) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224630510431899648,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:22:26.652  INFO 30848 --- [http-nio-8080-exec-3] (224631136767315968) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:22:26.653  INFO 30848 --- [http-nio-8080-exec-3] (224631136767315968) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224631136767315968,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:22:26.657  INFO 30848 --- [http-nio-8080-exec-1] (224631136788287488) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:22:26.661  INFO 30848 --- [http-nio-8080-exec-1] (224631136788287488) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224631136788287488,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 23:22:26.698  INFO 30848 --- [http-nio-8080-exec-2] (224631136960253952) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:22:26.698  INFO 30848 --- [http-nio-8080-exec-2] (224631136960253952) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224631136960253952,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:22:26.700  INFO 30848 --- [http-nio-8080-exec-8] (224631136968642560) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:22:26.702  INFO 30848 --- [http-nio-8080-exec-8] (224631136968642560) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224631136968642560,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:22:37.135  INFO 30848 --- [http-nio-8080-exec-5] (224631180736204800) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:22:37.136  INFO 30848 --- [http-nio-8080-exec-5] (224631180736204800) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224631180736204800,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:22:37.141  INFO 30848 --- [http-nio-8080-exec-6] (224631180761370624) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:22:37.146  INFO 30848 --- [http-nio-8080-exec-6] (224631180761370624) com.example.filter.RequestLogFilter      : 请求处理耗时: 5ms | 响应结果: {"id":224631180761370624,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 23:22:37.181  INFO 30848 --- [http-nio-8080-exec-7] (224631180929142784) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:22:37.181  INFO 30848 --- [http-nio-8080-exec-7] (224631180929142784) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224631180929142784,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:22:37.185  INFO 30848 --- [http-nio-8080-exec-9] (224631180945920000) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:22:37.188  INFO 30848 --- [http-nio-8080-exec-9] (224631180945920000) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224631180945920000,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:22:39.056  INFO 30848 --- [http-nio-8080-exec-4] (224631188793462784) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:22:39.059  INFO 30848 --- [http-nio-8080-exec-4] (224631188793462784) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224631188793462784,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 23:22:39.092  INFO 30848 --- [http-nio-8080-exec-10] (224631188944457728) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:22:39.095  INFO 30848 --- [http-nio-8080-exec-10] (224631188944457728) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224631188944457728,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:23:42.820  INFO 30848 --- [http-nio-8080-exec-1] (224631456239063040) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:23:42.821  INFO 30848 --- [http-nio-8080-exec-1] (224631456239063040) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224631456239063040,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:23:42.823  INFO 30848 --- [http-nio-8080-exec-2] (224631456251645952) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:23:42.827  INFO 30848 --- [http-nio-8080-exec-2] (224631456251645952) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224631456251645952,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:27:16.272  INFO 30848 --- [http-nio-8080-exec-5] (224632351521640448) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:27:16.272  INFO 30848 --- [http-nio-8080-exec-5] (224632351521640448) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224632351521640448,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:27:16.275  INFO 30848 --- [http-nio-8080-exec-6] (224632351534223360) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:27:16.279  INFO 30848 --- [http-nio-8080-exec-6] (224632351534223360) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224632351534223360,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 23:27:16.310  INFO 30848 --- [http-nio-8080-exec-7] (224632351681024000) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:27:16.310  INFO 30848 --- [http-nio-8080-exec-7] (224632351681024000) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224632351681024000,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:27:16.313  INFO 30848 --- [http-nio-8080-exec-9] (224632351693606912) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:27:16.317  INFO 30848 --- [http-nio-8080-exec-9] (224632351693606912) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224632351693606912,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:28:14.182  INFO 30848 --- [http-nio-8080-exec-4] (224632594413785088) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:28:14.183  INFO 30848 --- [http-nio-8080-exec-4] (224632594413785088) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224632594413785088,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:28:14.185  INFO 30848 --- [http-nio-8080-exec-10] (224632594426368000) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:28:14.189  INFO 30848 --- [http-nio-8080-exec-10] (224632594426368000) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224632594426368000,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:28:18.877  INFO 30848 --- [http-nio-8080-exec-3] (224632614106042368) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:28:18.879  INFO 30848 --- [http-nio-8080-exec-3] (224632614106042368) com.example.filter.RequestLogFilter      : 请求处理耗时: 2ms | 响应结果: {"id":224632614106042368,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}
+2025-04-14 23:29:19.497  INFO 30848 --- [http-nio-8080-exec-2] (224632868364750848) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:29:19.498  INFO 30848 --- [http-nio-8080-exec-2] (224632868364750848) com.example.filter.RequestLogFilter      : 请求处理耗时: 1ms | 响应结果: {"code":401,"data":null,"id":224632868364750848,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:29:19.503  INFO 30848 --- [http-nio-8080-exec-8] (224632868389916672) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/info" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:29:19.507  INFO 30848 --- [http-nio-8080-exec-8] (224632868389916672) com.example.filter.RequestLogFilter      : 请求处理耗时: 4ms | 响应结果: {"id":224632868389916672,"code":200,"data":{"username":"一粟","email":"Y1Suuu@163.com","role":"user","register_time":"2025-04-11T19:51:17.000+00:00"},"message":"请求成功"}
+2025-04-14 23:29:19.540  INFO 30848 --- [http-nio-8080-exec-5] (224632868545105920) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (OPTIONS) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 未验证 | 请求参数列表: {}
+2025-04-14 23:29:19.540  INFO 30848 --- [http-nio-8080-exec-5] (224632868545105920) com.example.filter.RequestLogFilter      : 请求处理耗时: 0ms | 响应结果: {"code":401,"data":null,"id":224632868545105920,"message":"Full authentication is required to access this resource"}
+2025-04-14 23:29:19.544  INFO 30848 --- [http-nio-8080-exec-6] (224632868557688832) com.example.filter.RequestLogFilter      : 请求URL: "/api/user/details" (GET) | 远程IP地址: 0:0:0:0:0:0:0:1 │ 身份: 一粟 (UID: 7) | 角色: [ROLE_user] | 请求参数列表: {}
+2025-04-14 23:29:19.546  INFO 30848 --- [http-nio-8080-exec-6] (224632868557688832) com.example.filter.RequestLogFilter      : 请求处理耗时: 3ms | 响应结果: {"id":224632868557688832,"code":200,"data":{"gender":0,"phone":"15886430806","qq":"3362187436","wx":"YiSu_i","desc":"你好，我是一西米！"},"message":"请求成功"}

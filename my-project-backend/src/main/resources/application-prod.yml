@@ -44,9 +44,15 @@ spring:
       mail-limit: 60
     flow:
       period: 3
-      limit: 10
+      limit: 100
       block: 30
     cors:
       origin: '*'
       credentials: false
       methods: '*'
+  minio:
+    endpoint: 'http://localhost:9090'
+    username: 'minio'
+    password: 'password'
+  weather:
+    key: c87680d9cb214a6ead3d39b7e94af9a4
